@@ -36,7 +36,7 @@ Viewers can pause at any moment, scan the on-screen QR, and jump straight to tha
 ## 🔗 Workflow with TinyURL
 
 1. Pick a unique short URL stem (don’t create it yet), e.g.  
-   `https://tinyurl.com/myshow2025`
+   `https://tinyurl.com/arp20130725`
 2. Run the script with your audio file and the chosen stem.
 3. Upload the generated video (and optional `.srt`) to YouTube.
 4. Create the TinyURL and point it to your YouTube video URL.
@@ -50,7 +50,7 @@ Viewers can pause at any moment, scan the on-screen QR, and jump straight to tha
 
 ```bash
 chmod +x run_qr_codes.py
-./run_qr_codes.py audio.mp3 https://tinyurl.com/myshow2025 -o qr_codes_video.mp4 -d 1
+./run_qr_codes.py audio.mp3 https://tinyurl.com/arp20130725 -o qr_codes_video.mp4 -d 1
 ```
 
 ### Using Python directly
@@ -60,7 +60,7 @@ python -m venv .venv
 source .venv/bin/activate    # Windows: .venv\Scripts\activate
 pip install opencv-python numpy "qrcode[pil]" rich typer
 
-python run_qr_codes.py audio.mp3 https://tinyurl.com/myshow2025 \
+python run_qr_codes.py audio.mp3 https://tinyurl.com/arp20130725 \
   --output qr_codes_video.mp4 --duration 1
 ```
 
@@ -73,7 +73,7 @@ Usage: run_qr_codes.py [OPTIONS] AUDIO_FILE_PATH SHORTENER_STEM
 
 Arguments:
   AUDIO_FILE_PATH  Path to the audio file. [required]
-  SHORTENER_STEM   Base URL stem for the shortener. Example: https://tinyurl.com/myshow2025 [required]
+  SHORTENER_STEM   Base URL stem for the shortener. Example: https://tinyurl.com/arp20130725 [required]
 
 Options:
   -o, --output TEXT         Output video path [default: qr_codes_video.mp4]
@@ -95,11 +95,11 @@ Example `.srt`:
 ```
 1
 00:00:00 --> 00:00:01
-https://tinyurl.com/myshow2025?t=0
+https://tinyurl.com/arp20130725?t=0
 
 2
 00:00:01 --> 00:00:02
-https://tinyurl.com/myshow2025?t=1
+https://tinyurl.com/arp20130725?t=1
 ```
 
 ---
