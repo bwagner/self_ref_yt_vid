@@ -3,7 +3,7 @@
 Generate a video of **continuously updating QR codes** that point to the *current timestamp* of your audio on YouTube.  
 Viewers can pause at any moment, scan the on-screen QR, and jump straight to that exact time. ([example](https://www.youtube.com/watch?v=deqMGh-Hu2w))
 
-> **Use case:** Long podcasts, lectures, or interviews uploaded to YouTube.  
+> **Use case:** Long podcasts, lectures, musical jam sessions, or interviews uploaded to YouTube.  
 > This script makes it easy to bookmark and share precise moments with a phone camera—no scrubbing required.
 
 ---
