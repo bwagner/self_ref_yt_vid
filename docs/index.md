@@ -85,7 +85,7 @@ Result:
 
 ## 🔗 Links
 
-- GitHub repo: [https://github.com/yourusername/yourrepo](https://github.com/yourusername/yourrepo)
+- GitHub repo: [https://github.com/bwagner/self_ref_yt_vid](https://github.com/bwagner/self_ref_yt_vid)
 
 ---
 
