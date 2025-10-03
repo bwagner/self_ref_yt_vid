@@ -1,4 +1,4 @@
-# Turning Audio into Running QR Codes for YouTube
+# A Video That Points to Itself: Self-Referencing Audio on YouTube with QR Codes
 
 [![QR video demo](assets/screenshot.png)](https://www.youtube.com/watch?v=deqMGh-Hu2w)
 
