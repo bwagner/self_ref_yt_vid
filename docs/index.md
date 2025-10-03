@@ -3,22 +3,25 @@
 [![QR video demo](assets/screenshot.png)](https://www.youtube.com/watch?v=deqMGh-Hu2w)
 
 
-Youtube is for uploading videos. What if you want to upload audio? You need at
-least a still image to go along with your audio. I had this question and
-wondered what image I should upload with my audio, since the primary purpose
-was to get the audio up there. I thought of simply making a still image of a
-qr-code encoding a URL pointing to somewhere related to the audio. But what?
-The youtube video itself! But the youtube video URL is only revealed to you
-*after* uploading your video to youtube! Here's where David Wheeler's wisdom
-comes in:
+Youtube is made for videos. But what if you want to upload just audio? You need
+at least a still image to go along with your audio.
+I found myself wondering what to use — after all, my only goal was simply to
+get the audio up there.
+
+One idea: make a still QR code pointing to something related to the audio. But
+what? The YouTube video itself! The catch is: that URL only exists *after* you
+upload. Here's where David Wheeler's wisdom comes in:
 
 > Any problem [in computer science] can be solved with another layer of indirection.
 
 We delegate the problem of generating a QR code pointing to an unknown URL by
-pointing to a known URL instead, which in turn will redirect to the final youtube
-URL, __once it's known__. Ok. But youtube allows to jump to any section in a video
-with a second's resolution. So, let's simply generate a video of QR codes that
-change every second and point to the respective audio section in the video.
+pointing to a known short URL instead. Once the video is uploaded, that short
+URL can redirect to it.
+
+But why stop there? YouTube lets you link directly to a specific timestamp in a
+video. So why not generate a whole **video of QR codes**, one per second, each
+pointing to the exact moment in the audio?
+
 Voilà: That's what this script does.
 
 ---
