@@ -1,6 +1,6 @@
 # Turning Audio into Running QR Codes for YouTube
 
-![QR video demo](../screenshot.png)
+![QR video demo](assets/screenshot.png)
 
 Youtube is for uploading videos. What if you want to upload audio? You need at
 least a still image to go along with your audio. I had this question and
