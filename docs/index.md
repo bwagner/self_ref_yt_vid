@@ -74,14 +74,6 @@ Result:
 
 ---
 
-## 📸 Demo screenshot
-
-Here’s a still frame (QR updates continuously in the video):
-
-![QR Screenshot](../screenshot.png)
-
----
-
 ## ⚡ Lessons learned
 
 - YouTube often ignores `t=…` if you’ve watched before → use **Incognito mode** to test.  
