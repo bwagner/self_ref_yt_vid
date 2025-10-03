@@ -89,4 +89,3 @@ Result:
 
 ---
 
-*Thanks for reading! Would love feedback, ideas, or other fun uses for this hack.*
