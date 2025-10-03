@@ -12,7 +12,7 @@ The youtube video itself! But the youtube video URL is only revealed to you
 *after* uploading your video to youtube! Here's where David Wheeler's wisdom
 comes in:
 
-Any problem [in computer science] can be solved with another layer of indirection.
+> Any problem [in computer science] can be solved with another layer of indirection.
 
 We delegate the problem of generating a QR code pointing to an unknown URL by
 pointing to a known URL instead, which in turn will redirect to the final youtube
