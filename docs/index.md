@@ -31,13 +31,14 @@ Voilà: That's what this script does.
 1. You start by preparing a TinyURL that will eventually redirect to your YouTube link.
    You need to use a TinyURL that's (very likely) to be unused! Note down your
    tinyurl, which will look similar to this: `https://tinyurl.com/arp20130725`.
+![tinyurl preparation](assets/tinyurl1.png)
 2. Run this script passing the path to your audio as first command line parameter and
    the tinyurl as the 2nd parameter. Courtesy of ffmpeg, a vast array of audio formats
    are supported as input.)
 3. The script generates a video where the **QR code updates every second** (or at a custom interval).
 4. You upload the generated video to YouTube (and optionally the generated .srt subtitle file)
-5. Note the **real** URL of your video and have your prepared tinyurl redirect to the
-   real youtube URL.
+5. Note the **real** URL of your video and have your prepared tinyurl redirect to it.
+![tinyurl preparation](assets/tinyurl2.png)
 6. Now scanning any QR in the video takes you to that exact timestamp.
 
 ---
