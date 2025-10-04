@@ -58,7 +58,7 @@ Voilà: That's what this script does.
 - **qrcode** → generates the QR codes
 - **OpenCV** → handles QR rendering and video frames
 - **ffmpeg/ffprobe** → mux audio + video and read durations
-- **typer** + **rich** → nice CLI and progress bars
+- **typer** + **rich** → CLI and progress bars
 
 ---
 
