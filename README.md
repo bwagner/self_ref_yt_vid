@@ -16,7 +16,7 @@ For a different take see [A Video That Points to Itself: Self-Referencing Audio 
 
 - Creates a video with QR codes that update every *N* seconds.
 - QR codes point to `SHORTENER_URL?t=SECONDS`.
-- Muxes video + audio into an H.264 MP4 with AAC audio.
+- Exports to any video format ffmpeg supports.
 - Optionally generates an `.srt` subtitle file with URLs per timestamp.
 - Designed for use with URL shorteners like TinyURL.
 
@@ -53,8 +53,8 @@ For a different take see [A Video That Points to Itself: Self-Referencing Audio 
 ### Using `uv` (recommended)
 
 ```bash
-chmod +x run_qr_codes.py
-./run_qr_codes.py audio.mp3 https://tinyurl.com/arp20130725 -o qr_codes_video.mp4 -d 1
+chmod +x self_ref_yt_vid.py
+./self_ref_yt_vid.py audio.mp3 https://tinyurl.com/arp20130725 -o qr_codes_video.mp4 -d 1
 ```
 
 ### Using Python directly
@@ -64,7 +64,7 @@ python -m venv .venv
 source .venv/bin/activate    # Windows: .venv\Scripts\activate
 pip install opencv-python numpy "qrcode[pil]" rich typer
 
-python run_qr_codes.py audio.mp3 https://tinyurl.com/arp20130725 \
+python self_ref_yt_vid.py audio.mp3 https://tinyurl.com/arp20130725 \
   --output qr_codes_video.mp4 --duration 1
 ```
 
@@ -73,18 +73,27 @@ python run_qr_codes.py audio.mp3 https://tinyurl.com/arp20130725 \
 ## 🧰 CLI Reference
 
 ```
-Usage: run_qr_codes.py [OPTIONS] AUDIO_FILE_PATH SHORTENER_STEM
+ Usage: self_ref_yt_vid.py [OPTIONS] AUDIO_FILE_PATH SHORTENER_STEM
 
-Arguments:
-  AUDIO_FILE_PATH  Path to the audio file. [required]
-  SHORTENER_STEM   Base URL stem for the shortener. Example: https://tinyurl.com/arp20130725 [required]
-
-Options:
-  -o, --output TEXT         Output video path [default: qr_codes_video.mp4]
-  -d, --duration INTEGER    Seconds per QR code [default: 1]
-      --generate-video      Generate video [default: True]
-      --subtitles-only      Generate only subtitles
-  -h, -?                    Show help
+╭─ Arguments ──────────────────────────────────────────────────────────────────╮
+│ *    audio_file_path      TEXT  Path to the audio file whose duration will   │
+│                                 determine the length of the video.           │
+│                                 [required]                                   │
+│ *    shortener_stem       TEXT  Base URL stem for the shortener. QR codes    │
+│                                 will be generated based on this stem.        │
+│                                 [required]                                   │
+╰──────────────────────────────────────────────────────────────────────────────╯
+╭─ Options ────────────────────────────────────────────────────────────────────╮
+│ --output          -o      TEXT     Output path for the generated QR code     │
+│                                    video.                                    │
+│                                    [default: (stem of audio file .mp4)]      │
+│ --duration        -d      INTEGER  Duration in seconds for which each QR     │
+│                                    code is displayed in the video.           │
+│                                    [default: 1]                              │
+│ --generate-video                   Generate video file. [default: True]      │
+│ --subtitles-only                   Generate only subtitles.                  │
+│ --help                             Show this message and exit.               │
+╰──────────────────────────────────────────────────────────────────────────────╯
 ```
 
 ---
@@ -124,7 +133,7 @@ https://tinyurl.com/arp20130725?t=1
 
 ```
 .
-├── run_qr_codes.py   # Main script
+├── self_ref_yt_vid.py   # Main script
 └── README.md
 ```
 
