@@ -206,10 +206,11 @@ if __name__ == "__main__":
             help="Base URL stem for the shortener. QR codes will be generated based on this stem.",
         ),
         output_video: str = typer.Option(
-            "qr_codes_video.mp4",
+            None,
             "--output",
             "-o",
             help="Output path for the generated QR code video.",
+            show_default = "stem of audio file .mp4",
         ),
         qr_duration: int = typer.Option(
             1,
@@ -224,6 +225,7 @@ if __name__ == "__main__":
             False, "--subtitles-only", help="Generate only subtitles."
         ),
     ):
+        output_video = output_video or f"{Path(audio_file_path).stem}.mp4"
         video_duration = int(get_media_duration(audio_file_path))
         subtitle_file_path = Path(output_video).with_suffix(".srt")
 
