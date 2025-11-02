@@ -229,6 +229,13 @@ if __name__ == "__main__":
         video_duration = int(get_media_duration(audio_file_path))
         subtitle_file_path = Path(output_video).with_suffix(".srt")
 
+        if "_" in shortener_stem:
+            print(f"Argument shortener_stem ({shortener_stem}) may not contain \"_\". Quitting.")
+            return
+
+        if not shortener_stem.startswith("http"):
+            print(f"Argument shortener_stem ({shortener_stem}) must start with \"http\". Quitting.")
+
         if subtitles_only or generate_video:
             generate_subtitles(
                 shortener_stem, video_duration, qr_duration, subtitle_file_path
